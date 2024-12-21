@@ -1,5 +1,5 @@
 // App1/src/App.jsx
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, MemoryRouter } from "react-router-dom";
 
 function Dashboard() {
   return (
@@ -43,7 +43,8 @@ function Profile() {
   );
 }
 
-function App() {
+// The main content component
+function AppContent() {
   return (
     <div className="bg-white rounded-lg shadow">
       {/* Navigation */}
@@ -81,6 +82,15 @@ function App() {
         </Routes>
       </div>
     </div>
+  );
+}
+
+// Wrapper component that provides routing context
+function App() {
+  return (
+    <MemoryRouter>
+      <AppContent />
+    </MemoryRouter>
   );
 }
 
