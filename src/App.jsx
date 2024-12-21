@@ -92,7 +92,7 @@ function App() {
           <Route path="settings" element={<Settings />} />
           <Route path="profile" element={<Profile />} />
           {/* Redirect invalid app1 routes to main app's 404 */}
-          <Route path="*" element={<Navigate to="/404" replace />} />
+          <Route path="*" element={<Navigate to="/main-app/404" replace />} />
         </Routes>
       </div>
     </div>
