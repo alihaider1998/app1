@@ -50,6 +50,7 @@ function App() {
         <div className="px-4 py-3">
           <div className="flex space-x-4">
             <NavLink
+              end
               to="/app1"
               className={({ isActive }) =>
                 `px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 ${
@@ -60,6 +61,7 @@ function App() {
               Dashboard
             </NavLink>
             <NavLink
+              end
               to="/app1/settings"
               className={({ isActive }) =>
                 `px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 ${
@@ -70,6 +72,7 @@ function App() {
               Settings
             </NavLink>
             <NavLink
+              end
               to="/app1/profile"
               className={({ isActive }) =>
                 `px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 ${
