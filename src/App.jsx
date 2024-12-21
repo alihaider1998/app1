@@ -1,5 +1,5 @@
 // App1/src/App.jsx
-import { Routes, Route, NavLink } from "react-router-dom";
+import { Routes, Route, NavLink, Navigate } from "react-router-dom";
 
 function Dashboard() {
   return (
@@ -91,6 +91,8 @@ function App() {
           <Route path="" element={<Dashboard />} />
           <Route path="settings" element={<Settings />} />
           <Route path="profile" element={<Profile />} />
+          {/* Redirect invalid app1 routes to main app's 404 */}
+          <Route path="*" element={<Navigate to="/404" replace />} />
         </Routes>
       </div>
     </div>
