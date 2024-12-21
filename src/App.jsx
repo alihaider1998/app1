@@ -1,5 +1,5 @@
 // App1/src/App.jsx
-import { Routes, Route, Link, MemoryRouter } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 
 function Dashboard() {
   return (
@@ -43,11 +43,9 @@ function Profile() {
   );
 }
 
-// The main content component
-function AppContent() {
+function App() {
   return (
     <div className="bg-white rounded-lg shadow">
-      {/* Navigation */}
       <nav className="border-b border-gray-200">
         <div className="px-4 py-3">
           <div className="flex space-x-4">
@@ -73,7 +71,6 @@ function AppContent() {
         </div>
       </nav>
 
-      {/* Content */}
       <div className="p-4">
         <Routes>
           <Route path="" element={<Dashboard />} />
@@ -82,15 +79,6 @@ function AppContent() {
         </Routes>
       </div>
     </div>
-  );
-}
-
-// Wrapper component that provides routing context
-function App() {
-  return (
-    <MemoryRouter>
-      <AppContent />
-    </MemoryRouter>
   );
 }
 
