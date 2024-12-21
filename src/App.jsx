@@ -1,5 +1,8 @@
 // App1/src/App.jsx
-import { Routes, Route, NavLink, Navigate } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
+import { lazy } from "react";
+
+const NotFound = lazy(() => import("host/NotFound"));
 
 function Dashboard() {
   return (
@@ -92,7 +95,7 @@ function App() {
           <Route path="settings" element={<Settings />} />
           <Route path="profile" element={<Profile />} />
           {/* Redirect invalid app1 routes to main app's 404 */}
-          <Route path="*" element={<Navigate to="/main-app/404" replace />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </div>
