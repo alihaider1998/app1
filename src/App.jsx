@@ -6,7 +6,7 @@ const NotFound = lazy(() => import("host/NotFound"));
 
 function Dashboard() {
   return (
-    <div className="p-4">
+    <div className="p-4 ">
       <h2 className="mb-4 text-xl font-bold">App1 Dashboard</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div className="p-4 rounded-lg bg-blue-50">
